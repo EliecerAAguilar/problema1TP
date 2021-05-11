@@ -24,7 +24,7 @@ function ensamblar {
 	echo "Hola! Ahora trabajaremos desde APNG Assembler (apngasm)"
 	if [[ -d $directorio ]]; then
 			echo "La ruta existe y es: $directorio"
-			echo "Kbytes	Archivos.png"
+			echo "Archivos.png"
 			f=$(ls -sh *.png)
 			for i in f;
 			do
