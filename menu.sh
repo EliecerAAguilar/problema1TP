@@ -7,7 +7,7 @@ function verificar {
 		read directorio
 		#directorio="/home/erod10/"
 		if [[ -d $directorio ]]; then
-			echo "La ruta existe y es: "$(pwd)
+			echo "La ruta existe y es: $directorio"
 			echo "Kbytes	Archivos.png"
 			f=$(ls -sh *.png)
 			for i in f;
@@ -23,7 +23,7 @@ function verificar {
 function ensamblar {
 	echo "Hola! Ahora trabajaremos desde APNG Assembler (apngasm)"
 	if [[ -d $directorio ]]; then
-			echo "La ruta existe y es: "$(pwd)
+			echo "La ruta existe y es: $directorio"
 			echo "Kbytes	Archivos.png"
 			f=$(ls -sh *.png)
 			for i in f;
