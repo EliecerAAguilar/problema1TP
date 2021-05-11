@@ -7,7 +7,7 @@ function verificar {
 		read directorio
 		#directorio="/home/erod10/"
 		if [[ -d $directorio ]]; then
-			echo "La existe y la ruta es: "$(pwd)
+			echo "La ruta existe y es: "$(pwd)
 			echo "Kbytes	Archivos.png"
 			f=$(ls -sh *.png)
 			for i in f;
@@ -21,7 +21,27 @@ function verificar {
 }
 
 function ensamblar {
-	echo "Hola desde la funcion!"
+	echo "Hola! Ahora trabajaremos desde APNG Assembler (apngasm)"
+	if [[ -d $directorio ]]; then
+			echo "La ruta existe y es: "$(pwd)
+			echo "Kbytes	Archivos.png"
+			f=$(ls -sh *.png)
+			for i in f;
+			do
+				l=$(($l+1))
+				echo "$f"
+			done
+		elif [[ -f $directorio ]]; then
+			echo "Es una ruta...pero de un archivo"
+		fi
+	echo "ingrese el nombre del archivo de salida"
+	read file_name
+	echo "ingrese el retraso o delay"
+	read file_delay
+	echo "ingrese cantidad de ciclos a animar"
+	read file_frame
+
+	apngasm -o $file_name.png clock*.png $file_delay -l$file_frame
 }
 
 function crear_GIF {
