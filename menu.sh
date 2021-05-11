@@ -29,7 +29,7 @@ function ensamblar {
 			for i in f;
 			do
 				# l=$(($l+1))
-				echo "$f"
+				echo $f
 			done
 		elif [[ -f $directorio ]]; then
 			echo "Es una ruta...pero de un archivo"
@@ -41,7 +41,7 @@ function ensamblar {
 	echo "ingrese cantidad de ciclos a animar"
 	read file_frame
 
-	apngasm -o $file_name.png clock*.png $file_delay -l$file_frame
+	apngasm -o $file_name.png $f $file_delay -l$file_frame
 }
 
 function crear_GIF {
