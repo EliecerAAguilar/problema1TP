@@ -36,9 +36,9 @@ function ensamblar {
 		fi
 	echo "ingrese el nombre del archivo de salida"
 	read file_name
-	echo "ingrese el retraso o delay"
+	echo "ingrese 2 numeros (separados por espacios) para el retraso o delay"
 	read file_delay
-	echo "ingrese cantidad de ciclos a animar"
+	echo "ingrese 1 numero que será el ciclos de repetición de la animación"
 	read file_frame
 
 	apngasm -o $file_name.png $f $file_delay -l$file_frame
