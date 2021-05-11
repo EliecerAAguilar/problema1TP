@@ -12,7 +12,7 @@ function verificar {
 			f=$(ls -sh *.png)
 			for i in f;
 			do
-				l=$(($l+1))
+# 				l=$(($l+1))
 				echo "$f"
 			done
 		elif [[ -f $directorio ]]; then
@@ -28,7 +28,7 @@ function ensamblar {
 			f=$(ls -sh *.png)
 			for i in f;
 			do
-				l=$(($l+1))
+				# l=$(($l+1))
 				echo "$f"
 			done
 		elif [[ -f $directorio ]]; then
